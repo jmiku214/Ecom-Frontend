@@ -1,0 +1,143 @@
+.main_div {
+    height: 100vh;
+    width: 100vw;
+    background-color: bisque;
+    overflow-x: hidden;
+}
+
+.header_div {
+    height: 55px;
+    width: 100vw;
+    background-color: blue;
+    color: whitesmoke;
+    overflow-y: hidden;
+    margin-top: -50px;
+
+
+}
+
+.heading {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.dashboard_logout_button {
+    margin-top: -47px;
+    margin-left: 71%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dashboard_button {
+    height: 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    background-color: rgb(247, 187, 77);
+}
+
+.logout_button {
+    height: 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-left: 10px;
+    background-color: rgb(247, 187, 77);
+}
+
+.back_button_div {
+    width: 20%;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.back_button_image {
+    width: 40px;
+    height: 40px;
+}
+
+.address_div{
+    margin-top: 20px;
+    margin-left: 20px;
+    
+    
+    height: 40%;
+}
+
+.add_address_link{
+    
+    font-size: 30px;
+}
+
+.add_address_text{
+    margin-left: 20px;
+    font-size: 21px;
+}
+
+.form_input{
+    width: 50px;
+    background-color: aqua;
+    height: 24px;
+    margin-top: 8px;
+}
+
+.form_label{
+  font-size: 19px;
+}
+
+.form_label_div{
+    margin-left: 50px;
+    margin-top: -28px;
+   display: flex;
+   flex-direction: row;
+}
+
+.add_new_address_div{
+    margin-top: 4%;
+    margin-left: 17px;
+}
+
+.product_details_div{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+}
+
+.product_image{
+    max-width: 130px;
+}
+
+.product_details_inner{
+    margin-left: 10px;
+    margin-top: -7px;
+
+}
+.product_name{
+    font-size: 18px;
+}
+
+.button_div{
+    margin-left: 57px;
+    margin-top: 10px;
+}
+
+.button_inner_div{
+    display: flex;
+    flex-direction: row;
+}
+
+.proceed_to_buy_button{
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: turquoise;
+}
+.go_to_cart_button{
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 20px;
+    background-color: rgb(247, 187, 77);
+}

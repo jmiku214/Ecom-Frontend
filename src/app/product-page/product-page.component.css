@@ -1,0 +1,103 @@
+.main_div {
+    height: 100vh;
+    width: 100vw;
+    background-color: bisque;
+    overflow-x: hidden;
+}
+
+.back_button_div {
+    width: 10%;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.back_button_image {
+    width: 40px;
+    height: 40px;
+}
+
+.header_div {
+    height: 70px;
+    width: 100%;
+    background-color: rgb(99, 99, 168);
+    margin-top: -55px;
+    text-align: center;
+}
+
+.cart_icon {
+    float: right;
+    margin-right: 200px;
+    margin-top: 21px;
+    transform: scale(1.5);
+    color: rgb(247, 187, 77);
+}
+
+.logout_button {
+    float: right;
+    margin-top: 15px;
+    margin-right: 60px;
+    width: 80px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: rgb(247, 187, 77);
+}
+
+.image_upper_div {
+    width: 40%;
+    max-height: 40%;
+    margin-left: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+.product_name_div {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.price_div {
+    display: flex;
+    justify-content: center;
+}
+
+.cart_button_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.add_cart_button {
+    height: 45px;
+    font-size: 20px;
+    background-color: salmon;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.buy_now_button_div {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.buy_now_button {
+    height: 45px;
+    font-size: 20px;
+    background-color: salmon;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.menu_button{
+    margin-top: -50px;
+    margin-left: 90px;
+    float: right;
+    margin-right: 80px;
+  }

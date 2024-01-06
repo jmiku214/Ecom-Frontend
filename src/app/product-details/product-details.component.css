@@ -1,0 +1,151 @@
+.main_div {
+    height: 100vh;
+    width: 100vw;
+    background-color: bisque;
+    overflow-x: hidden;
+}
+
+.back_button_image_div {
+    width: 10%;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.back_button_image {
+    width: 40px;
+    height: 40px;
+}
+
+.heading_cart_logout_button_div {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(99, 99, 168);
+    margin-top: -55px;
+    text-align: center;
+}
+
+.sub_product_name {
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    margin-left: 60px;
+    margin-top: 5px;
+}
+
+.cart_icon {
+    float: right;
+    margin-right: 200px;
+    margin-top: -47px;
+    transform: scale(1.5);
+    color: rgb(247, 187, 77);
+}
+
+.logout_button {
+    float: right;
+    margin-top: -56px;
+    margin-right: 60px;
+    height: 40px;
+    width: 70px;
+    border-radius: 6px;
+    font-size: 17px;
+    background-color: rgb(247, 187, 77);
+}
+
+.add_button_div {
+    padding: 10px;
+}
+
+.add_button {
+    float: right;
+    margin-top: 4px;
+    height: 40px;
+    margin-right: 40px;
+    border-radius: 10px;
+    background-color: blue;
+    color: aqua;
+    font-size: 17px;
+}
+
+.product_outer_div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    margin-left: 5.5%;
+   margin-top: -10px;
+    
+}
+
+.product_inner_div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    max-width: 200px;
+}
+
+/* .product_inner_div:hover{
+    box-shadow: 0 0 20px rgba(33,33,33,.2); 
+    border-radius: 40px;
+    max-width: 200px;
+  } */
+
+.three_dot_button_div {
+    margin-left: 90%
+}
+
+.menu_button_position {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.product_image {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+.product_image:hover{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(255, 30, 0); 
+}
+
+.product_name {
+    font-size: 20px;
+    color: steelblue;
+    text-align: center;
+}
+
+.product_price {
+    font-size: 20px;
+    margin-top: -7px;
+    text-align: center;
+}
+
+.product_available_quantity {
+    margin-top: -6px;
+    text-align: center;
+}
+
+.form-control{
+   float: left;
+    width: 270px;
+    margin-top: 0px;
+    height: 54px;
+    margin-left: 7%;
+}
+
+.select_option {
+    height: 75px;
+    width: 220px;
+    margin-left: 2%;
+}
+
+.menu_button{
+    margin-top: -58px;
+    margin-left: 90px;
+    float: right;
+    margin-right: 80px;
+  }
+  

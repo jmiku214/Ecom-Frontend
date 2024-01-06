@@ -1,0 +1,50 @@
+<div class="main">
+
+    <div class="inside1">
+        <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"
+            style="border: none; background-color: blue; height: 70px; margin-left: 10px; margin-top: -9px;">
+            <mat-icon style="color: black; ">menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/welcome">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+            </button>
+
+            <button mat-menu-item routerLink="/chat">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="message"></mat-icon>
+            </button>
+        </mat-menu> -->
+        <h1 class="dashboard_heading"><b><i>Ecom-Dashboard</i></b>
+        </h1>
+        <!-- <div style="background-color: aqua;float: right;margin-top: -4%;"> -->
+        <!-- <mat-icon class="maticon_add_to_cart" routerLink="/cart">shopping_cart</mat-icon>
+        <button type="button" class="btn btn-warning" style="margin-top: -50px;float: right;margin-right: 54px;"
+            (click)="logout()">Logout</button> -->
+        <div class="menu_button">
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
+                [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/orderPage">Orders</button>
+                <button mat-menu-item routerLink="/cart">Cart</button>
+                <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+        </div>
+    </div>
+
+    <div class="add_button_div" *ngIf="addButton">
+        <button class="add_new_button" routerLink="/parentProduct">+Add
+            New</button>
+    </div>
+    <div class="item_data_upper_div_main">
+        <div class="item_data_div_main" *ngFor="let item of parentDataArray" (click)="getSubProduct(item.id)">
+            <img src={{item.imageUrl}} class="item_image">
+            <h1 class="item_product_name">{{item.productName}}</h1>
+        </div>
+        <!-- <div>
+            <img src="../../assets/userlogo.png" style="height: 250px;margin-left: 20px;">
+        </div> -->
+    </div>
+
+</div>

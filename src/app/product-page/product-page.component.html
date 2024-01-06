@@ -1,0 +1,48 @@
+<div class="main_div">
+    <div class="back_button_div">
+        <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" class="back_button_image"
+            (click)="backToProductPage()">
+    </div>
+    <div class="header_div">
+        <mat-icon class="cart_icon" routerLink="/cart">shopping_cart</mat-icon>
+        <button type="button" class="logout_button" (click)="logout()">Logout</button>
+    </div>
+    <div class="image_upper_div">
+        <div (mouseover)="showArrow()" (mouseleave)="hiddenarrow()">
+            <img src={{imageName}} class="image">
+            <!-- <mat-icon style="transform: scale(4.6);color: orange;margin-left: -29px;" *ngIf="arrowShow"
+                (click)="getNextImage()">keyboard_arrow_right</mat-icon>
+            <mat-icon style="transform: scale(4.6);color: orange;margin-left: -60%;margin-top: 10px;"
+                *ngIf="arrowShow" (click)="getPreviousImage()">keyboard_arrow_left</mat-icon> -->
+
+        </div>
+        <!-- <div style="margin-top: -62%;margin-left: 75%;">
+            <mat-icon style="transform: scale(1.6);color: red;">favorite</mat-icon>
+        </div> -->
+        <!-- <div style="margin-left: 62.6%;margin-top: 12%;" *ngIf="arrowShow">
+            <mat-icon style="transform: scale(2.9);color: orange;">keyboard_arrow_right</mat-icon>
+        </div> -->
+
+
+
+    </div>
+    <div class="product_name_div">
+        <h3 style="font-size: 30px;">{{productName}}</h3>
+
+    </div>
+    <div class="price_div">
+        <h2>Price: ₹{{price | number}}</h2>
+    </div>
+    <div class="cart_button_div">
+        <button class="add_cart_button" (click)="addToCart()">
+            <mat-icon>add_shopping_cart</mat-icon>Add To Cart</button>
+
+    </div>
+    <div class="buy_now_button_div">
+        <button class="buy_now_button" (click)="buyNow()">
+            <mat-icon> monetization_on</mat-icon>Buy Now</button>
+    </div>
+
+
+
+</div>

@@ -1,0 +1,27 @@
+<div style="height: 100%; width: 100%; background-color: cadetblue; overflow-x: hidden;">
+    <form>
+    <h1 style="text-align: center; margin-top: 10px; font-size: 30px; color: black">Registration Form</h1>
+
+    <div
+        style="overflow-x: hidden; display: flex; flex-direction: column; margin-left: 25%; background-color: whitesmoke;width: 50%; height: 60%; border-radius: 20px;box-shadow: 4px 10px 4px gray; padding: 10px;">
+        <div style="display: flex;justify-content: center;">
+            <img src="../../../assets/userlogo.png" alt="" style="width: 35%;">
+        </div>
+        <div style="display: flex;justify-content: center;flex-direction: column; margin-top: 10px; padding: 10px; margin-left: 32%;">
+            <input type="text"
+                style="width: 300px; background-color: transparent; height: 40px; color: black;font-size: 15px; outline: none; border-bottom: 2px solid #1a1a1d; border-radius: 10px;"
+                placeholder="Email" #username="ngModel" [(ngModel)]="user.email" name="email">
+            <input type="text"
+                style="width: 300px; background-color: transparent; height: 40px; color: black;font-size: 15px; outline: none; border-bottom: 2px solid #1a1a1d; margin-top: 10px;border-radius: 10px;"
+                placeholder="Contact No:" #phoneNo="ngModel" [(ngModel)]="user.phoneNo" name="phoneNo">
+            <input type="text"
+                style="width: 300px; background-color: transparent; height: 40px; color: black;font-size: 15px; outline: none; border-bottom: 2px solid #1a1a1d; margin-top: 10px; border-radius: 10px;"
+                placeholder="Username" #userName="ngModel" [(ngModel)]="user.userName" name="userName">
+        </div>
+        <div style="display: flex; justify-content: center; padding: 10px;">
+            <button style="height: 30px; width: 60px;border-radius: 10px;background-color: rgb(37, 37, 168); margin-left: 170px;color: aliceblue;" (click)="register()">Submit</button>
+            <button style="height: 30px; width: 60px;border-radius: 10px;background-color: blue; margin-left: 5px; color: antiquewhite;" routerLink="/">Cancel</button>
+        </div>
+    </div>
+</form>
+</div>

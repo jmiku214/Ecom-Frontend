@@ -1,0 +1,24 @@
+<div class="main_div">
+    <form>
+        <h1 class="main_heading">Add New Product</h1>
+
+        <div class="form_outer_div">
+            <div class="form_inner_div">
+                <input type="text" class="product_name_field" placeholder="Product Name" #productName="ngModel"
+                    [(ngModel)]="product.productName" name="productName">
+                <input type="text" class="product_image_field" placeholder="ImageUrl" #productImage="ngModel"
+                    [(ngModel)]="product.productImage" name="productImage">
+                <input type="text" class="model_name_field" placeholder="Model Name" #modelName="ngModel"
+                    [(ngModel)]="product.modelName" name="modelName">
+                <input type="text" class="price_field" placeholder="Price" #price="ngModel" [(ngModel)]="product.price"
+                    name="price">
+                <input type="text" class="available_stock" placeholder="Stock" #availableStock="ngModel"
+                    [(ngModel)]="product.availableStock" name="availableStock">
+            </div>
+            <div class="button_div">
+                <button class="submit_button" (click)="addProduct()">Submit</button>
+                <button class="cancel_button" (click)="cancel()">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,36 @@
+<div class="main_div">
+    <div class="back_button_div">
+        <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" routerLink="/dashboard"
+            class="back_button_image">
+    </div>
+    <div class="name_cart_logout_div">
+
+        <h1 class="product_heading"><b><i>{{parentProductName}}</i></b></h1>
+        <!-- <mat-icon class="maticon_cart" routerLink="/cart">shopping_cart</mat-icon>
+        <button type="button" class="btn btn-warning" style="float: right;margin-top: -45px;margin-right: 60px;"
+            (click)="logout()">Logout</button>
+        <button type="button" class="btn btn-warning" style="float: right;margin-top: -45px;margin-right: 160px;"
+            routerLink="/dashboard">Home</button> -->
+            <div class="menu_button">
+                <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
+                    [matMenuTriggerFor]="menu">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item routerLink="/orderPage">Orders</button>
+                    <button mat-menu-item routerLink="/cart">Cart</button>
+                    <button mat-menu-item routerLink="/dashboard">Dashboard</button>
+                    <button mat-menu-item (click)="logout()">Logout</button>
+                </mat-menu>
+            </div>
+    </div>
+    <div *ngIf="addButton">
+        <button class="add_new_button" (click)="addSubProduct()">+Add New</button>
+    </div>
+    <div class="item_upper_div">
+        <div class="item_main_div" *ngFor="let item of subProductList" (click)="getProducts(item.id)">
+            <img src={{item.imageUrl}}  class="item_image">
+            <h1 class="item_name"><b>{{item.subProductName}}</b></h1>
+        </div>
+    </div>
+</div>

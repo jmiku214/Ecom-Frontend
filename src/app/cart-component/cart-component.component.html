@@ -1,0 +1,49 @@
+<div class="main_div">
+    <div class="heading_div">
+        <div>
+            <h1 class="cart_heading_name"><b><i>Cart Details</i></b>
+            </h1>
+        </div>
+        <div class="dashboard_logout_button">
+            <!-- <button class="dashboard_button" routerLink="/dashboard"><b>Dashboard</b></button>
+            <button class="logout_button" (click)="logout()"><b>Logout</b></button> -->
+            <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon" [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+              </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/dashboard">Dashboard</button>
+                <button mat-menu-item routerLink="/orderPage">Orders</button>
+                <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+        </div>
+
+
+    </div>
+
+    <div class="cart_data_outer_div" *ngFor="let item of cartData">
+        <div class="cart_data_inner_div">
+            <img src={{item.productImage}} class="product_image">
+            <div class="button_main_div">
+                <div class="buynow_button_div">
+                    <button class="buynow_button" (click)="buyNow(item)">Buy
+                        Now</button>
+
+                </div>
+                <div class="remove_cart_button_div">
+                    <button class="remove_cart_button" (click)="removeFromCart(item.id)">Remove From Cart</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="product_details_div">
+            <h2 class="product_name">{{item.productName}} {{item.productModel}}</h2>
+            <h2>Quantity: {{item.totalQuantity}}</h2>
+            <h2>Total Price: ₹{{item.totalPrice}}</h2>
+            <h2>Available in stock: {{item.productAvailableStock}}</h2>
+
+        </div>
+    </div>
+
+
+</div>

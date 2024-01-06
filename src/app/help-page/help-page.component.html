@@ -1,0 +1,31 @@
+<div class="main_div">
+    <div class="back_button_image_div">
+        <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" class="back_button_image"
+            routerLink="/orderPage">
+    </div>
+    <div class="header_div">
+        <h1 class="help_page_heading"><b><i>Help Center</i></b></h1>
+    </div>
+    <div class="main_upper_div">
+        <div class="option_choose_field">
+            <mat-form-field appearance="fill" class="select_option">
+                <mat-label>Select Order</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let item of orderData" [value]="item" (click)="getHelp(item.id)">
+                        {{item.productName}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="option_choose_field">
+            <mat-form-field appearance="fill" class="select_option">
+                <mat-label>Please Choose An Option</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let item of helpList" [value]="item" (click)="getHelp(item)">
+                        {{item}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+</div>

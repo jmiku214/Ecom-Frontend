@@ -1,0 +1,102 @@
+.main_div{
+    height: 100vh;
+    width: 100vw;
+    background-color: bisque;
+    overflow-x: hidden;
+}
+
+.back_button_image_div {
+    width: 10%;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.back_button_image {
+    width: 40px;
+    height: 40px;
+}
+.heading_div {
+    height: 55px;
+    background-color: blue;
+    overflow-y: hidden;
+}
+
+.cart_heading_name {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 6px;
+}
+
+.dashboard_logout_button {
+    margin-top: -45px;
+    margin-left: 90px;
+    float: right;
+    margin-right: 80px;
+}
+
+.product_details_div{
+    display: flex;
+    flex-direction: row;
+    max-height: 220px;
+    margin-left: 70px;
+}
+
+.product_image{
+    margin-top: 6px;
+    max-height: 130px;
+    max-width: 100px;
+}
+.margin_div{
+    
+    margin-top: -10px;
+}
+.margin{
+    width: 100vw;   
+}
+
+.product_details_inner_div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.help_link{
+    margin-top: -7px;
+}
+
+.track_cancel_button{
+    float: right;
+}
+
+.cancel_order_button{
+    margin-left: 10px;
+}
+
+.modal-title{
+    font-size: 20px;
+}
+
+
+.cancel_button_div{
+   margin-left: 150px;
+   margin-top: -35px;
+}
+.reorder_track_order_button{
+    min-width: 130px;
+    height: 37px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+}
+
+.delete_icon_div{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    min-width: 400px;
+}
+
+.delete_icon{
+    height: 30px;
+    width: 40px;
+}

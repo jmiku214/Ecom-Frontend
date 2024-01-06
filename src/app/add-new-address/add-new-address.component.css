@@ -1,0 +1,100 @@
+.main_div {
+    height: 100vh;
+    width: 100vw;
+    background-color: bisque;
+    overflow-x: hidden;
+}
+
+.header_div {
+    height: 55px;
+    width: 100vw;
+    background-color: blue;
+    color: whitesmoke;
+    overflow-y: hidden;
+    margin-top: -50px;
+
+}
+
+.heading {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.back_button_div {
+    width: 20%;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.back_button_image {
+    width: 40px;
+    height: 40px;
+}
+
+.address_form_div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.conatct_person_name {
+    width: 360px;
+    height: 60px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    margin-top: 5px;
+    font-size: 17px;
+}
+
+.state_select_field {
+    margin-top: 5px;
+
+    height: 59px;
+}
+
+
+
+.select_option {
+    height: 80px;
+    width: 360px;
+}
+
+.city_select_field {
+    margin-top: 5px;
+
+    height: 59px;
+}
+
+.submit_button_div {
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.submit_button{
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 20px;
+    background-color: rgb(247, 187, 77);
+    color: black;
+}
+
+.cancel_button_div{
+    margin-left: 260px;
+    margin-top: -40px;
+}
+
+.cancel_button{
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 20px;
+    background-color: rgb(74, 74, 172);
+    color: aqua;
+}

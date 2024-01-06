@@ -1,0 +1,91 @@
+.main_div {
+    height: 100vh;
+    width: 100%;
+    background-color: cadetblue;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.main_heading {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 30px;
+    color: whitesmoke
+}
+
+.form_outer_div {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #E8A87C;
+    height: 43%;
+    border-radius: 20px;
+    box-shadow: 4px 10px 4px gray;
+    padding: 30px;
+    width: 100%;
+}
+
+.form_inner_div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.product_name_input_field {
+    width: 500px;
+    background-color: transparent;
+    height: 70px;
+    color: #1a1a1d;
+    font-size: 15px;
+    outline: none;
+    border-bottom: 2px solid cadetblue;
+    border-radius: 10px;
+    font-size: 20px;
+    border-top: 2px solid cadetblue;
+    border-left: 2px solid cadetblue;
+    border-right: 2px solid cadetblue;
+}
+
+.image_input_field {
+    width: 500px;
+    background-color: transparent;
+    height: 70px;
+    color: #1a1a1d;
+    font-size: 15px;
+    outline: none;
+    margin-top: 30px;
+    border-bottom: 2px solid cadetblue;
+    border-radius: 10px;
+    font-size: 20px;
+    border-top: 2px solid cadetblue;
+    border-left: 2px solid cadetblue;
+    border-right: 2px solid cadetblue;
+}
+
+.button_div {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.submit_button {
+    height: 50px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: rgb(37, 37, 168);
+    margin-left: 290px;
+    color: aliceblue;
+}
+
+.cancel_button {
+    height: 50px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: blue;
+    margin-left: 15px;
+    color: antiquewhite;
+}

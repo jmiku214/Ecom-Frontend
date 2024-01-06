@@ -1,0 +1,72 @@
+<div class="main_div">
+    <div class="back_button_image_div">
+        <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" class="back_button_image"
+            (click)="backToSubproducts()">
+    </div>
+    <div class="heading_cart_logout_button_div">
+
+        <h1 class="sub_product_name">
+            <b><i>{{subproductName}}</i></b>
+        </h1>
+        <div class="menu_button">
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
+                [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/orderPage">Orders</button>
+                <button mat-menu-item routerLink="/cart">Cart</button>
+                <button mat-menu-item routerLink="/dashboard">Dashboard</button>
+                <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+        </div>
+        
+
+    </div>
+    <div *ngIf="addButton" class="add_button_div">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+            placeholder="&#61442;  Search For a Product" (input)="getFilterdata()">
+        <mat-form-field appearance="fill" class="select_option">
+            <mat-label>Select Price Range</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let item of productPriceList" [value]="item" (click)="setData(item)">
+                    {{item}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button class="add_button" (click)="addProduct()">+Add
+            New</button>
+    </div>
+
+
+    <div class="product_outer_div">
+        <div class="product_inner_div" *ngFor="let item of filteredList">
+            <div *ngIf="addButton" class="three_dot_button_div">
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"
+                    class="menu_button_position">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="updateProduct(item)">
+                        <span>Edit</span>
+                    </button>
+                    <button mat-menu-item (click)="deleteProduct(item.id)">
+                        <span>Remove</span>
+                    </button>
+                </mat-menu>
+            </div>
+            <div (click)="redirectProductPage(item.id)">
+                <img src={{item.productImage}} class="product_image">
+
+                <h1 class="product_name">{{item.productName}} {{item.modelName}}
+                </h1>
+                <p class="product_price">Price: ₹{{item.price|number}}</p>
+                <p class="product_available_quantity">Available Quantity: {{item.availableStock}}</p>
+
+                <!-- <button style="height: 40px; border-radius: 15px;background-color: blue;color: aqua;">Add To Cart</button> -->
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,24 @@
+<div class="main-div">
+    <img src="../../../assets/background.jpg"
+        style="background-size: cover; width: 100vw; height: 100vh;opacity: 0.7; ">
+
+
+    <form class="example-form" style="position: absolute;top:20%;">
+        <div class="login-form"
+            style="display: flex;flex-direction: column; background-color: whitesmoke; padding: 30px; border-radius: 20px;box-shadow: 4px 10px 4px gray;">
+            <input type="text"
+                style="width: 300px; background-color: transparent; border-top: none; border-left: none; border-right: none; height: 40px; color: black;font-size: 15px; outline: none; border-bottom: 2px solid #1a1a1d;"
+                placeholder="Email" #username="ngModel" [(ngModel)]="userLogin.username" name="username">
+            <input type="password"
+                style="width: 300px; background-color: transparent; border-top: none; border-left: none; border-right: none; height: 40px; color: black;font-size: 15px; margin-top: 30px; outline: none;border-bottom: 2px solid #1a1a1d;"
+                placeholder="Password" #password="ngModel" [(ngModel)]="userLogin.password" name="password">
+            <button
+                style="margin-top: 30px; width: 70px; height: 40px; font-size: 20px; margin-left: 110px; background-color: blue; border-radius: 5px;color: white;"
+                (click)="login()">Login</button>
+            <h3 style="margin-top: 15px; margin-left: 80px;"><a routerLink="/forgetPassword">Forget Password?</a></h3>
+            <h3 style="margin-top: 0px; margin-left: 50px;">For Registration <a routerLink="/registration">Click
+                    Here</a></h3>
+        </div>
+    </form>
+
+</div>

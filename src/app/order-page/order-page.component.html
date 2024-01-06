@@ -1,0 +1,90 @@
+<div class="main_div">
+    <div class="heading_div">
+        <div>
+            <h1 class="cart_heading_name"><b><i>Orders</i></b>
+            </h1>
+        </div>
+        <div class="dashboard_logout_button">
+            <!-- <button class="dashboard_button" routerLink="/dashboard"><b>Dashboard</b></button>
+            <button class="logout_button" (click)="logout()"><b>Logout</b></button> -->
+            <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon"
+                [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/dashboard">Dashboard</button>
+                <button mat-menu-item routerLink="/cart">Cart</button>
+                <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+        </div>
+
+    </div>
+    <div *ngFor="let item of orderData">
+        <div class="product_details_div">
+            <img src={{item.product.productImage}} class="product_image">
+            <div class="product_details_inner_div">
+                <h3 style="font-size: 18px;margin-top: 2px"><b>{{item.productName}}</b></h3>
+                <h3 style="margin-top: -13px;"><b>Order Placed At:</b> {{item.orderAt}}</h3>
+                <div *ngIf="item.cancelledOn===null; else cancelData">
+                    <h3 style="margin-top: -13px;"><b>Expected Delivery:</b> {{item.expectedDelivered}}</h3>
+                </div>
+                <ng-template #cancelData>
+                    <h3 style="margin-top: -13px;color: red;"><b>Order Cancelled On:</b> {{item.cancelledOn}}</h3>
+                </ng-template>
+                <h4 style="margin-top: -13px;"><b>Delivered To:</b> {{item.deliveredTo}}</h4>
+                <p style="margin-top: -13px;"><b>Payment Mode:</b> Cash On Delivery</p>
+                <div *ngIf="item.orderStatus!='ORDER_CANCELLED_BY_USER'; else something">
+                    <p style="margin-top: -8px;"><b>Status: </b>{{item.orderStatus}}</p>
+                </div>
+                <ng-template #something>
+                    <p style="margin-top: -8px; color: red;"><b>Status: </b>{{item.orderStatus}}</p>
+                </ng-template>
+                <!-- <a class="help_link" routerLink="" (click)="navigateToHelpPage()"><p>Need Help?</p></a> -->
+                <div class="track_cancel_button">
+                    <div class="track_order_button" *ngIf="item.orderStatus==='ORDER_CANCELLED_BY_USER';else elsePart">
+                        <button class="reorder_track_order_button" (click)="reOrder(item.productId)">Re-Order</button>
+                    </div>
+                    <ng-template #elsePart>
+                        <div class="track_order_button">
+                            <button class="reorder_track_order_button">Track Order</button>
+                        </div>
+                    </ng-template>
+                    <div class="cancel_button_div">
+                        <button mat-raised-button color="warn" class="cancel_order_button"
+                            (click)="openPopup(item)">Cancel
+                            Order</button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Are you sure want to cancel the order??</h4>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" style="width: 80px;"
+                                        (click)="cancelOrder(item)">Yes</button>
+                                    <button type="button" class="btn btn-danger" (click)="closePopup()"
+                                        style="width: 80px;">
+                                        No
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="delete_icon_div">
+                <mat-icon class="delete_icon">delete_forever</mat-icon>
+            </div> -->
+
+        </div>
+        <div class="margin_div">
+            <hr class="margin">
+        </div>
+    </div>
+
+</div>

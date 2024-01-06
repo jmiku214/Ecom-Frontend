@@ -1,0 +1,18 @@
+<div class="main_div">
+    <form>
+        <h1 class="main_heading">Add New Sub Product</h1>
+
+        <div class="form_outer_div">
+            <div class="form_inner_div">
+                <input type="text" class="subproduct_name_input_field" placeholder="Sub-Product Name"
+                    #subProductName="ngModel" [(ngModel)]="subproduct.subProductName" name="subProductName">
+                <input type="text" class="image_input_field" placeholder="ImageUrl" #imageUrl="ngModel"
+                    [(ngModel)]="subproduct.imageUrl" name="imageUrl">
+            </div>
+            <div class="button_div">
+                <button class="submit_button" (click)="addSubProduct()">Submit</button>
+                <button class="cancel_button" routerLink="/dashboard">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

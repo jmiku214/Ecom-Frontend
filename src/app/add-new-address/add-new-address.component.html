@@ -1,0 +1,54 @@
+<div class="main_div">
+    <div class="back_button_div">
+        <img src="https://cdn-icons-png.flaticon.com/512/93/93634.png" routerLink="/address" class="back_button_image">
+    </div>
+    <div class="header_div">
+        <h1 class="heading"><b><i>Enter Address Details</i></b> </h1>
+    </div>
+    <form>
+        <div class="address_form_div">
+
+            <input type="text" placeholder="Enter Contact Name" class="conatct_person_name" #addressform="ngModel"
+                [(ngModel)]="address.name" name="name">
+            <input type="text" placeholder="Enter Phone Number" class="conatct_person_name" #addressform="ngModel"
+                [(ngModel)]="address.phone" name="phone">
+
+            <div class="state_select_field">
+                <mat-form-field appearance="fill" class="select_option">
+                    <mat-label>Select State</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let item of stateList" [value]="item.stateName"
+                            (click)="getCityData(item.id)">
+                            {{item.stateName}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="city_select_field">
+                <mat-form-field appearance="fill" class="select_option">
+                    <mat-label>Select City</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let item of cityList" [value]="item.cityName"
+                            (click)="setCityData(item.id)">
+                            {{item.cityName}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <input type="text" placeholder="Enter Pin Code" class="conatct_person_name" #addressform="ngModel"
+                [(ngModel)]="address.pincode" name="pincode">
+            <input type="text" placeholder="Enter Address Details" class="conatct_person_name" #addressform="ngModel"
+                [(ngModel)]="address.address" name="address">
+            <input type="text" placeholder="Enter Nearby Location" class="conatct_person_name" #addressform="ngModel"
+                [(ngModel)]="address.nearByLocationAddress" name="nearByLocationAddress">
+            <div class="submit_button_div">
+                <button class="submit_button" (click)="saveAddress()">Submit</button>
+
+            </div>
+            <div class="cancel_button_div">
+                <button class="cancel_button" routerLink="/address">Cancel</button>
+            </div>
+
+        </div>
+    </form>
+</div>
